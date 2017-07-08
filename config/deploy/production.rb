@@ -59,6 +59,7 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
 # 環境名
 set :stage, :production
 
