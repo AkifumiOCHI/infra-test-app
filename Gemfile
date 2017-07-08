@@ -26,6 +26,7 @@ gem 'rmagick'
 gem 'fog-aws'
 
 gem 'dotenv-rails'
+gem 'therubyracer', platforms: :ruby
 
 group :development, :test do
   gem 'byebug', platform: :mri
