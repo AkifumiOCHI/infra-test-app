@@ -1,7 +1,7 @@
 # config/deploy.rb
 
 # capistranoのバージョン固定
-lock '3.6.1'
+lock '3.8.1'
 
 # デプロイするアプリケーション名
 set :application, 'infra-test-app'
