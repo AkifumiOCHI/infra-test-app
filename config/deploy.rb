@@ -33,3 +33,10 @@ set :rbenv_type, :system
 
 # デプロイ実行時に出力するログのレベル。
 set :log_level, :debug
+
+set :default_env, {
+	AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+}
+set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+set :sidekiq_queue, :carrierwave
