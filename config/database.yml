@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: infra-test-app_production
-  username: infra-test-app
+  username: root
   password: <%= ENV['INFRA-TEST-APP_DATABASE_PASSWORD'] %>
