@@ -14,6 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
+  password:
   host: localhost
 
 development:
@@ -49,5 +50,5 @@ test:
 production:
   <<: *default
   database: infra-test-app_production
-  username: root
+  username: infra-test-app
   password: <%= ENV['INFRA-TEST-APP_DATABASE_PASSWORD'] %>
