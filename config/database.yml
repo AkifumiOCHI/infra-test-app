@@ -5,15 +5,12 @@ default: &default
   username: root
   # password:
   host: localhost
-
 development:
   <<: *default
   database: infra-test-app_development
-
 test:
   <<: *default
   database: infra-test-app_test
-
 production:
   <<: *default
   database: infra-test-app_production
