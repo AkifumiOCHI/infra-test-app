@@ -8,7 +8,16 @@ CarrierWave.configure do |config|
     #host:                  's3.example.com',             # optional, defaults to nil
     #endpoint:              'https://s3.example.com:8080' # optional, defaults to nil
   }
-  config.fog_directory  = ENV['BUCKET_NAME']              # required
+
+  case Rails.env
+    when 'production'
+        config.fog_directory  = ENV['BUCKET_NAME'] # required
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/infra-test-app-production'
+    when 'development'
+        config.fog_directory  = ENV['BUCKET_NAME']
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/infra-test-app-development'
+  end
+
   config.fog_public     = false                           # optional, defaults to true
   config.fog_attributes = { cache_control: "public, max-age=#{365.day.to_i}" } # optional, defaults to {}
 end
