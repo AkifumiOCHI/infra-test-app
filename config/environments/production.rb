@@ -83,4 +83,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  endpoint    = "infra-course-day4.aeol9e.cfg.apne1.cache.amazonaws.com:11211" # <- エンドポイントを指定する
+  elasticache = Dalli::ElastiCache.new(endpoint)
+
+  config.cache_store = :dalli_store, elasticache.servers, {:expires_in => 1.day, :compress => true}
 end

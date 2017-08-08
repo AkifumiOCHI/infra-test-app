@@ -27,6 +27,7 @@ gem 'fog-aws'
 
 gem 'dotenv-rails'
 gem 'therubyracer', platforms: :ruby
+gem 'dalli-elasticache'
 
 group :development, :test do
   gem 'byebug', platform: :mri
