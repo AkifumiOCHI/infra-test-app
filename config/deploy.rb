@@ -16,13 +16,13 @@ set :branch, ENV['BRANCH'] || 'master'
 # deploy先のディレクトリ。
 set :deploy_to, '/var/www/infra-test-app'
 
-# シンボリックリンクをはるファイル。(※後述)
+# シンボリックリンクをはるファイル。
 set :linked_files, %w(config/secrets.yml config/database.yml .env)
 
-# シンボリックリンクをはるフォルダ。(※後述)
+# シンボリックリンクをはるフォルダ。
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets)
 
-# 保持するバージョンの個数(※後述)
+# 保持するバージョンの個数
 set :keep_releases, 5
 
 # rubyのバージョン
