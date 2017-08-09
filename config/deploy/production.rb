@@ -66,6 +66,6 @@ set :stage, :production
 # RAILS_ENVに設定する値
 set :rails_env, :production
 
-role :app, %w{ app@app1.felicevoce.tokyo }
-role :web, %w{ app@app1.felicevoce.tokyo }
+role :app, %w{ app@app1.felicevoce.tokyo app@app2.felicevoce.tokyo }
+role :web, %w{ app@app1.felicevoce.tokyo app@app2.felicevoce.tokyo }
 role :db,  %w{ app@app1.felicevoce.tokyo }
